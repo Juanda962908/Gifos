@@ -1,0 +1,108 @@
+.header {
+
+    width: 100%;
+    margin-top: 0px;
+
+
+
+}
+
+.header .barrainicial {
+
+    width: 100%;
+    height: 23px;
+    top: 0px;
+    left: 0px;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    position: fixed;
+    z-index: 9999;
+}
+
+
+.header .barrainicial .titulobarrainicial {
+
+    width: 36.9%;
+    height: 16px;
+    top: 50px;
+}
+
+.header .barrainicial .titulobarrainicial a {
+
+
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-decoration: none;
+
+
+}
+
+
+.logobotones {
+    position: relative;
+    margin-top: 59px;
+    margin-left: 6.3%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+
+.btncrear {
+
+    width: 10%;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-left: 47.6%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+.btncrear p{
+    text-align: center;
+    align-self: center;
+
+}
+
+.btnelegir {
+
+    width: 9.1%;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-left: 1.1%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.btnelegir p {
+
+    text-align: center;
+    align-self: center;
+}
+
+
+.btnmisguifos {
+
+    margin-left: 1.1%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    
+    height: 36px;
+}
+
+.btnmisguifos p{
+
+    text-align: center;
+    align-self: center; 
+}
