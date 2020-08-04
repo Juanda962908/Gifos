@@ -1,0 +1,27 @@
+.sugeridosection {
+
+    width: 83.3%;
+    height: 32px;
+    margin-left: 6.9%;
+    margin-top: 0%;
+
+}
+
+.sugeridotitulo{
+
+    display: flex;
+    height: 32px;   
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    align-items: center;
+}
+
+.sugeridotitulo p{
+    font-family: ChakraPetch-Regular;
+font-size: 14px;
+color: #110038;
+letter-spacing: 0;
+padding-left: 0.5%;
+
+}

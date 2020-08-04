@@ -1,0 +1,105 @@
+.busqueda {
+    width: 100%;
+    margin-top: 19px;
+    cursor: pointer;
+}
+
+.contenedorbusqueda {
+    width: 83.3%;
+    height: 99px;
+    margin-left: 6.9%;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.barrainicialbusqueda {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.barrabusquedatitulo {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+
+}
+
+.barrabusqueda {
+    position: relative;
+    width: 100%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+
+.inputbusqueda {
+    width: 83.3%;
+    height: 48px;
+    margin-top: 12px;
+    cursor: pointer;
+
+}
+
+.botonlupa {
+    width: 7.1%;
+    height: 36px;
+    margin-top: 18px;
+    margin-left: 0.6%;
+    cursor: pointer;
+}
+
+/********************************************************************/
+
+.tipobusquedas {
+  
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    position: relative; 
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+   /*  height: 200px; */
+ 
+}
+
+.tipobusquedas button {
+    width: 73.3%;
+    height: 34px;
+    border: 1px solid #110038;
+    margin-left: 1.1%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    
+}
+
+.tipobusquedas button p{
+
+    padding-left: 1%;
+}
+
+.resultadosugerido {
+
+    margin-top: 17px;
+}
+
+.resultadosimilar {
+    margin-top: 11px;
+    background: #F0F0F0;
+border: 1px solid #808080;
+box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.otromas{
+
+    margin-top: 11px;
+    background: #F0F0F0;
+border: 1px solid #808080;
+box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}

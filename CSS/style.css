@@ -1,9 +1,18 @@
-@import "./header.css";
-@import "./menubuscar.css";
+
+
+@import "./inicio.css";
+@import "./busqueda.css";
+@import "./resultados.css";
+@import "./sugeridos.css";
 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+
+    width: 100%;
 }

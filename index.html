@@ -11,92 +11,100 @@
 
 
 
-
 <body>
-
-
-
-    <header class="header">
-        <nav class="barrainicial">
-
-            <div class="titulobarrainicial">
-
-                <a href="">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas:
-                    12.765.803</a>
-            </div>
-        </nav>
-
-
-        <div class="logobotones">
-
-            <div class="imagenlogo">
-                <img src="./Images/gifOF_logo.png" alt="LogoGifo">
-            </div>
-
-
-
-            <div class="btncrear">
-                <p>Crear Guifos</p>
-            </div>
-            <div class="btnelegir">
-                <p>Elegir tema</p>
-            </div>
-            <div class="btnmisguifos">
-                <p><u>M</u>is Guifos</p>
-            </div>
-
-
+    <header>
+        <div class="barratitulo">
+            <p>¡Bienvenidos/as a Guifos.com! ------Donde los gifs están.////// Número de visitas: 12.765.803</p>
         </div>
-
     </header>
 
-    <main>
 
+<!-- ---------------------------------------------------------------- -->
 
-
-        <section class="buscar">
-
-            <div class="menubuscar">
-                <div class="barratitulo">
-                    <p>Buscar</p>
-                </div>
-
-               
-
-                <div class="busqueda">
-
-                    <div class="barrabusqueda">
-
-                        <p>Busca gifs, hashtags, temas, busca lo que quieras…</p>
-
-                    </div>
-
-                    <div class="imagenbusqueda">
-                        <div class="logobusqueda">
-                            <img src="./Images/lupa_inactive.svg" alt="">
-                        </div>
-    
-                        <div class="frasebusqueda"><p>Buscar</p></div>
-                        
-    
-                    </div>
-
-                </div>
+    <section class="inicio" id="intro">
+        
+        <div class="contenedorinicio">
+            <div class="logo">
+                <img id="logoimagen" src="./images/gifOF_logo.png" alt="Logo Principal vista normal">
             </div>
 
-        </section>
+
+            <div class="botones">
+                <a class="botoncrear" href="./record.html">Crear Guifos</a>
+                <div  class="temas" id="temas">
+                    <button class="botontema1" onclick="funcionDesplegable()">Elegir tema</button>
+                    <button class="botontema2" onclick="funcionDesplegable()"><img id="imgdrop" src="./images/dropdown.svg" alt="Desplegable elegir tema"></button>
+                    <a class="grabar" id="record" href="./record.html"><span>M</span>is Guifos</a>
+                    <div id="desplegabletema">
+                        <button id="dia" onclick="estiloLight()">Sailor Day</button>
+                        <button id="noche" onclick="estiloDark()">Sailor Night</button>
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+<!-- ---------------------------------------------------------------- -->
 
 
 
 
-    </main>
+
+    <section class="busqueda" id="busqueda">
+        <div class="contenedorbusqueda" onmousemove="mostrarmenu()" onmouseout="ocultarmenu()">
+            <div id="barrainicialbusqueda" class="barrainicialbusqueda">
+                <div class="barrabusquedatitulo">
+                    <p>Buscar</p>
+                </div>
+                <div class="barrabusqueda" id="barrabusqueda">    
+                    <input class="inputbusqueda" id="inputbusqueda" type="text" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">
+                    <button class="botonlupa"  id="botonlupa" type="submit" onclick="searchFromInput()"><span><img src="./images/lupa_inactive.svg" alt="Lupa">Buscar</span></button>
+                </div>                
+            </div>  
+            
+            <div id="tipobusquedas" class="tipobusquedas">
+                <button class="resultadosugerido" type="button"><p>Resultado de búsqueda sugerido</p></button>
+                <button class="resultadosimilar" type="button"><p>resultado similar de búsqueda</p></button>
+                <button class="otromas" type="button"><p>Y otro más</p></button>
+            </div>
+         
+        </div>
+    </section>
 
 
 
 
 
+<!-- ---------------------------------------------------------------- -->
+    <section class="sugeridosection">
+        <div class="sugeridotitulo">
+            <p>Hoy te sugerimos:</p>
+        </div>    
+        <div id="gifSugeridos" class="flexSugerido">
+        </div>
+    </section>
 
 
+
+<!-- ---------------------------------------------------------------- -->
+    <section class="tendenciasection">
+        <div class="tendencia">
+            <p id="tendenciatitulo" class="tendenciatitulo">Tendencias:</p>
+        </div> 
+        <!-- Aca empieza el grid-->   
+        <div id="gridtendencias" class="gridtendencias">
+        </div>
+    </section>
+
+
+
+
+
+    <script src="./JS/javascript.js"></script>  
+    <script src="./JS/menubuscar.js"></script> 
 </body>
 
 </html>

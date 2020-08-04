@@ -1,0 +1,84 @@
+.tendenciasection {
+    width: 83.3%;
+    margin-left: 6.9%;
+    
+}
+
+.tendencia {
+    display: flex;
+    height: 32px;   
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    align-items: center;
+}
+
+.tendenciatitulo{
+    
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    padding-left: 0.5%;
+   
+}
+
+
+.gridtendencias {
+    margin-top: 16px;
+    display: grid;    
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1.1%;
+    row-gap: 10px;      
+    margin-left: 0%;
+   
+  /*  margin-left: 6.9%; */
+}
+
+
+
+
+.gridcontenedorimagen {
+    
+    height: 298px;
+    /*margin-top: 15px;*/
+    
+}
+
+
+
+.gridcontenedorimagen img {
+    width: 100%;
+    height: 290px;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.gridcontenedorimagen .footer {
+    display: none;
+    position: relative;
+    margin-left: 4px;
+    width: 100%;
+    height: 24px;
+    z-index: 800;
+    margin-top: -28px;
+}
+
+.footer p {
+    padding-left: 3px;
+    padding-top: 3px;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+.gridcontenedorimagen:hover .footer {
+    background: #E6E6E6;
+    z-index: 800;
+    display: block;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.gridcontenedorimagen:hover {
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
