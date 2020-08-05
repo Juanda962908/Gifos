@@ -1,6 +1,6 @@
 function buscar_sugeridos() {
   let contenedor_sugerido = document.getElementById("sugeridos")
-  let sugeridos_hoy = ["Harry Potter", "Messi", "Avión", "Guitarra"]
+  let sugeridos_hoy = ["bread", "Messi", "Avión", "Guitarra"]
   let apikey = "8Oc7NtbE0yskmJrjyzaHNBxjHycKZ3pp"
 
   sugeridos_hoy.forEach(items=>{
@@ -28,7 +28,7 @@ function buscar_sugeridos() {
         const parrafo_sugerido = document.createElement('p')
         parrafo_sugerido.classList.add('parrafosugerido')
         titulo_sugerido.appendChild(parrafo_sugerido)
-        parrafo_sugerido.innerHTML = obj.title
+        parrafo_sugerido.innerHTML = `#${obj.title}`
 
         const boton_cerrar = document.createElement('img')
         boton_cerrar.classList.add("botoncerrar")
@@ -42,11 +42,8 @@ function buscar_sugeridos() {
 
         const boton_vermas = document.createElement('button')
         boton_vermas.classList.add('vermas');
-        cajagif_sugerido.appendChild(button);
-        button.onclick = boton_ver_masresultados()
-
-
-        function boton_ver_masresultados(){
+        cajagif_sugerido.appendChild(boton_vermas);
+        boton_vermas.onclick = function boton_ver_masresultados(){
 
         document.getElementById('gridtendencias').innerHTML = ''
         const Mostrar_resultado = document.getElementById('gridtendencias')
@@ -62,23 +59,23 @@ function buscar_sugeridos() {
 
         fetch(buscar_item_url)
         .then(response => {
-          return response.json();
+          return response.json()
         })
         .then(json => {
           json.data.forEach(item => {
             var gifurl = item.images.original.url;
     
-            const contenedor_imagen = document.createElement('div');
-            Mostrar_resultado.appendChild(contenedor_imagen);
-            contenedor_imagen.classList.add('gridcontenedorimagen');
+            const contenedor_imagen = document.createElement('div')
+            Mostrar_resultado.appendChild(contenedor_imagen)
+            contenedor_imagen.classList.add('gridcontenedorimagen')
     
-            const nuevo_Gif = document.createElement('img');
-            contenedor_imagen.appendChild(nuevo_Gif);
+            const nuevo_Gif = document.createElement('img')
+            contenedor_imagen.appendChild(nuevo_Gif)
             nuevo_Gif.src = gifurl;
             nuevo_Gif.classList.add('gifBuscado');
     
             const divtitle = document.createElement('div')
-            divtitle.classList.add('footer');
+            divtitle.classList.add('footer')
             contenedor_imagen.appendChild(divtitle);
     
             const gtitle = document.createElement('p')
@@ -86,16 +83,24 @@ function buscar_sugeridos() {
             gtitle.innerHTML = item.title;
           })
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
         }
 
+        const texto_boton = document.createElement('p')
+        texto_boton.classList.add('vermasp')
+        boton_vermas.appendChild(texto_boton)
+
+        var vermastext = document.createTextNode("Ver más")
+        texto_boton.appendChild(vermastext)
+
+
+
+
       })
-    })
-
-    
-  })
-
-
-  
+    })    
+  }) 
 
 }
+
+
+buscar_sugeridos()
