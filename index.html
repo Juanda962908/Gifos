@@ -60,12 +60,12 @@
                     <p>Buscar</p>
                 </div>
                 <div class="barrabusqueda" id="barrabusqueda">    
-                    <input class="inputbusqueda" id="inputbusqueda" type="text" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">
-                    <button class="botonlupa"  id="botonlupa" type="submit" onclick="searchFromInput()"><span><img src="./images/lupa_inactive.svg" alt="Lupa">Buscar</span></button>
+                    <input class="inputbusqueda" id="inputbusqueda"  type="text" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">
+                    <button class="botonlupa"  id="botonlupa" type="submit" onclick="resultados_de_busquedas()" ><span><img src="./images/lupa_inactive.svg" alt="Lupa">Buscar</span></button>
                 </div>                
             </div>  
             
-            <div id="tipobusquedas" class="tipobusquedas">
+            <div id="tipobusquedas" class="tipodebusquedas">
                 <button class="resultadosugerido" type="button"><p>Resultado de búsqueda sugerido</p></button>
                 <button class="resultadosimilar" type="button"><p>resultado similar de búsqueda</p></button>
                 <button class="otromas" type="button"><p>Y otro más</p></button>
@@ -83,7 +83,7 @@
         <div class="sugeridotitulo">
             <p>Hoy te sugerimos:</p>
         </div>    
-        <div id="gifSugeridos" class="flexSugerido">
+        <div id="sugeridos" class="contenedor_Sugeridos">
         </div>
     </section>
 
@@ -103,8 +103,10 @@
 
 
 
-    <script src="./JS/javascript.js"></script>  
+     
     <script src="./JS/menubuscar.js"></script> 
+    <script src="./JS/Tendencia.js"></script> 
+    <script src="./JS/Sugeridos.js" ></script>
 </body>
 
 </html>

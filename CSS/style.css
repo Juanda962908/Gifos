@@ -2,8 +2,8 @@
 
 @import "./inicio.css";
 @import "./busqueda.css";
-@import "./resultados.css";
-@import "./sugeridos.css";
+@import "./tendencia.css";
+@import "./sugerido.css";
 
 
 *{
@@ -15,4 +15,5 @@
 body{
 
     width: 100%;
+    background:#FFFAFE 100%;
 }

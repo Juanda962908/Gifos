@@ -55,20 +55,20 @@
 
 /********************************************************************/
 
-.tipobusquedas {
+.tipodebusquedas {
   
     margin-top:30px;
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-top: 0px;
     position: relative; 
     background: #E6E6E6;
-    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-   /*  height: 200px; */
+box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+   
  
 }
 
-.tipobusquedas button {
+.tipodebusquedas button {
     width: 73.3%;
     height: 34px;
     border: 1px solid #110038;
@@ -79,7 +79,7 @@
     
 }
 
-.tipobusquedas button p{
+.tipodebusquedas button p{
 
     padding-left: 1%;
 }
