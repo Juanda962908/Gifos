@@ -49,8 +49,9 @@ function buscar_sugeridos() {
         const Mostrar_resultado = document.getElementById('gridtendencias')
         const tendencia_titulo = document.getElementById('tendenciatitulo').innerHTML
         const cambiar_titulo = tendencia_titulo.replace("Tendencias","Resultados de busqueda")
-        document.getElementById("tendenciatitulo").innerHTML = cambiar_titulo 
+        document.getElementById("tendenciatitulo").innerHTML = cambiar_titulo
         
+
         var buscar_item = items
 
         let buscar_item_url = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${buscar_item}&limit=16&offset=0&rating=G&lang=e`

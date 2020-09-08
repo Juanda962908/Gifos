@@ -42,8 +42,6 @@ tendencias();
 
 
 
-
-
 function resultados_de_busquedas() {
   document.getElementById("tendenciatitulo").innerHTML = 'Resultados de busqueda' // Cambio el título  
   document.getElementById("gridtendencias").innerHTML = '' //dejamos el contenido del div gidtrendin vacio
@@ -52,6 +50,8 @@ function resultados_de_busquedas() {
   let x = document.getElementById("inputbusqueda").value
   let url = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${x}&limit=16&offset=0&rating=G&lang=e`;
 
+document.getElementById("sugeridosection").style.visibility = "hidden"
+document.getElementById("tendenciasection").style.marginTop="10px"
 
   fetch(url)
     .then(response => {
