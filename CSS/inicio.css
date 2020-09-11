@@ -1,12 +1,12 @@
 header {
     width: 100%;
-    height: 24px;
+   
     margin-top: 0px;
 }
 
 .barratitulo {
     width: 100%;
-    height: 23px;
+    height: 1.44rem;
     margin-top: 1px;
     margin-left: 1px;
     margin-right: 1px;
@@ -46,7 +46,7 @@ header {
 .logo {
     width: 7.1%;
     height: 6%;
-    margin-left: 6.3%;
+    margin-left: 6.9%;
     margin-top: 35px;
 }
 
@@ -58,12 +58,12 @@ header {
 .botones {
     width: 100%;
     position: absolute;
-    height: 36px;
+    height: 2.25rem;
     display: flex;
     flex-direction: row;
     margin-left: 61%;
     margin-top: 44px;
-    /*  background: red; */
+   
 }
 
 /* .botones button{
@@ -95,7 +95,7 @@ header {
 .elegirTema {
     display: flex;
     flex-direction: column;
-    margin-left: 1.1%;
+    margin-left:1rem;
     width: 100%;
     
 }
@@ -110,7 +110,7 @@ header {
 
 .botonTema1 {
     width: 9.1%;
-    height: 36px;
+    height: 2.25rem;
     background:#F7C9F3 100% ;
     font-family: ChakraPetch-Regular;
 font-size: 16px;
@@ -128,7 +128,7 @@ line-height: 18px;
 
 .botonTema2 {
     width: 2.5%;
-    height: 36px;
+    height: 2.25rem;
     margin-left: 0%;
     background:#F7C9F3 100% ;
     
@@ -143,7 +143,7 @@ line-height: 18px;
 .TextoTemas {
     display: flex;
     flex-direction: column;
-    width: 11.8%;
+    width: 10.63rem;
     height: 150px;
 
     padding-left: 0.7%;
