@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>    
+
+<body>
 
     <header>
         <div class="barratitulo">
@@ -39,19 +42,91 @@
                             <a id="record" href="./record.html"><span>M</span>is Guifos</a>
                         </div>
                     </div>
-
-                    <div class="TextoTemas" id="TextoTemas">
+                    <!-- <div class="TextoTemas" id="TextoTemas">
                         <button class="Dia" onclick="SailorDay()">Sailor Day</button>
                         <button class="Noche" onclick="SailorNight()">Sailor Night</button>
 
-                    </div>
-
-
+                    </div> -->
                 </div>
-
-
             </div>
         </div>
     </section>
+
+
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaUnoGrabar" id="ventanaUnoGrabar">
+
+        <div class="ventanaUno">
+            <div class="tituloBarraVentanaUno">
+                <p>Crear Guifos</p>
+            </div>
+
+
+            <div class="indicacionVentanaUno">
+                <div class="iconoVentanaUno">
+                    <img src="./images/window img.png" alt="">
+                </div>
+                <div class="tituloVentanaUno">
+                    <h1>Aquí podrás crear tus propios guifos</h1>
+                    <div class="indicaciones">
+                        <p>
+                            Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                            personalizados. Los pasos para crear tu guifo son: <br><br>
+                            <strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso) <br>
+                            <strong> 2)</strong> Capturar tu momento guifo <br>
+                            <strong> 3)</strong> Revisar el momento <br>
+                            <strong> 4)</strong> Listo para subir y compartir! <br>
+                            ¿Quieres comenzar a crear tu guifo ahora?
+                        </p>
+
+                    </div>
+                    <div class="botonesVentanaUno">
+                        <span class="loadWindowButtons"><button id="btn-cancel" class="cancel">Cancelar</button>
+                            <button class="start" id="btn-start"
+                                onclick="hideShow1(); verImagen();">Comenzar</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaDosGrabar" id="">
+        <div class="ventanaDosCabecera">
+            <div class="tituloVentanaDos">
+                <p>Un chequeo antes de empezar</p>
+            </div>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="previewVentanaDos">
+            <video id="video"></video>
+        </div>
+        <span class="capturaVentanaDos">
+            <button class="IconoCamara"><img src="./images/camera.svg" alt="camera button"></button>
+            <button id="botonGrabar" onclick="hideShow2(); startRecordingNow();" class="capturar">Capturar</button>
+        </span>
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+
+  <section class="misGifos">
+        <div class="misGifosTit">
+            <p id="misGifosTitulo">Mis Guifos:</p>
+        </div> 
+        
+        <div id="gridMisGifos">
+            
+        </div>
+    </section>
+
+
+
+    
+    <script src="./JS/grabar.js"></script>
 </body>
+
 </html>

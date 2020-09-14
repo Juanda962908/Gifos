@@ -1,0 +1,105 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.VentanaUnoGrabar {
+    width: 100%;
+}
+
+.tituloBarraVentanaUno {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+}
+
+.ventanaUno {
+
+    width: 42.75rem;
+    height: 24.13rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.indicacionVentanaUno {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconoVentanaUno {
+    margin-left: 1.56rem;
+    margin-top: 1.88rem;
+
+}
+
+.tituloVentanaUno {
+    margin-left: 1.1%;
+    margin-top: 1.88rem;
+}
+
+.tituloVentanaUno h1 {
+    font-family: ChakraPetch-Bold;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+
+.tituloVentanaUno p {
+    margin-top: 1.06rem;
+    font-family: ChakraPetch-Regular;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.tituloVentanaUno p strong {
+    font-family: ChakraPetch-BoldItalic;
+    font-size: 14px;
+    color: #00001A;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.indicaciones {
+    height: 11.88rem;
+    width: 32.38rem;
+    
+}
+
+.indicaciones p {
+
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.botonesVentanaUno span{
+    display: flex;
+    flex-direction: row;
+    margin-left: 16.94rem;
+    margin-top: 1.75rem;
+}
+
+
+
+.botonesVentanaUno span button {
+
+    width:9rem;
+    height: 2.25rem;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-left: 1rem;
+    
+}

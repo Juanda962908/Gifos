@@ -43,3 +43,4 @@ function SailorDay(){
     document.getElementById('logoimagen').src = './images/gifOF_logo.png'
     ocultarTemas()
 }
+
