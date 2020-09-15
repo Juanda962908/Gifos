@@ -62,8 +62,6 @@
             <div class="tituloBarraVentanaUno">
                 <p>Crear Guifos</p>
             </div>
-
-
             <div class="indicacionVentanaUno">
                 <div class="iconoVentanaUno">
                     <img src="./images/window img.png" alt="">
@@ -80,12 +78,11 @@
                             <strong> 4)</strong> Listo para subir y compartir! <br>
                             ¿Quieres comenzar a crear tu guifo ahora?
                         </p>
-
                     </div>
                     <div class="botonesVentanaUno">
                         <span class="loadWindowButtons"><button id="btn-cancel" class="cancel">Cancelar</button>
                             <button class="start" id="btn-start"
-                                onclick="hideShow1(); verImagen();">Comenzar</button></span>
+                                onclick="ocultar_Ventana_Uno(); verImagen();">Comenzar</button></span>
                     </div>
                 </div>
             </div>
@@ -95,7 +92,7 @@
 
     <!-- --------------------------------------------------------------- -->
 
-    <section class="ventanaDosGrabar" id="">
+    <section class="ventanaDosGrabar" id="ventanaDosGrabar">
         <div class="ventanaDosCabecera">
             <div class="tituloVentanaDos">
                 <p>Un chequeo antes de empezar</p>
@@ -107,26 +104,57 @@
         </div>
         <span class="capturaVentanaDos">
             <button class="IconoCamara"><img src="./images/camera.svg" alt="camera button"></button>
-            <button id="botonGrabar" onclick="hideShow2(); startRecordingNow();" class="capturar">Capturar</button>
+            <button id="botonGrabar" onclick="ocultar_Ventana_Dos(); startRecordingNow();" class="capturar">Capturar</button>
         </span>
     </section>
 
     <!-- --------------------------------------------------------------- -->
 
-  <section class="misGifos">
+
+    <section class="ventanaTresGrabar" id="ventanaTresGrabar">
+        <div class="ventanaTresCabecera">
+            <div class="tituloVentanaTres">
+                <p>Capturando Tu Guifo</p>
+            </div>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="previewVentanaTres">
+            <img id="imagen" alt="Imagen capturada">
+        </div>
+        <span class="tiempoConteo">
+            <span id="timer" class="timer">
+                00 : 00 : 00
+            </span>
+            <span class="grabacion">
+                <button class="grabacionIcono"><img src="./images/recording.svg" alt="recording button"></button>
+                <button class="grabacionListo" id="btn-stop-recording"
+                    onclick="hideShow3(); stopRecordingNow();">Listo</button></span>
+        </span>
+
+
+    </section>
+
+
+
+
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="misGifos">
         <div class="misGifosTit">
             <p id="misGifosTitulo">Mis Guifos:</p>
-        </div> 
-        
+        </div>
+
         <div id="gridMisGifos">
-            
+
         </div>
     </section>
 
 
 
-    
+
     <script src="./JS/grabar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
 </body>
 
 </html>
