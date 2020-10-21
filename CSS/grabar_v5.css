@@ -1,0 +1,23 @@
+.ventanaCincoGrabar {
+    margin-top: 5vh;
+    width: 53.75rem;
+    height: 34.25rem;
+    background: #E6E6E6;
+
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+.ventanaCincoCabecera {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

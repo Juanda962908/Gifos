@@ -97,7 +97,7 @@
             <div class="tituloVentanaDos">
                 <p>Un chequeo antes de empezar</p>
             </div>
-            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></spaustify-content: space-between;n>
         </div>
         <div class="previewVentanaDos">
             <video id="video"></video>
@@ -128,9 +128,41 @@
             <span class="grabacion">
                 <button class="grabacionIcono"><img src="./images/recording.svg" alt="recording button"></button>
                 <button class="grabacionListo" id="btn-stop-recording"
-                    onclick="hideShow3(); stopRecordingNow();">Listo</button></span>
+                    onclick="ocultar_Ventana_Tres(); stopRecordingNow();">Listo</button></span>
         </span>
 
+
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaCuatroGrabar" id="ventanaCuatroGrabar">
+        <div class="ventanaCuatroCabecera">
+            <span class="titleventanaCuatro">
+                Vista previa
+            </span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+
+        <div class="previewVentanaCuatro"><img id="imageness" alt="vista previa gif capturado"></div> 
+        
+        <div class="windowFooter">
+            <div class="timerandloader">
+                <span id="timer" class="timer">
+                    00 : 00 : 00
+                </span>
+                <button class="fwdButton" onclick="move();"> <img src="./images/forward.svg" alt="fwd"> </button>
+                <div class="progresscontainer">
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="rptuploadbuttons">
+                <button class="repetir" onclick="ocultar_Ventana_Seis();">Repetir captura</button>
+                <button class="subir" id="btn-upload" onclick="postgif(); move(); hideShow5();">Subir Guifo</button>
+            </span>
+        </div>
 
     </section>
 
@@ -138,8 +170,31 @@
 
 
 
-    <!-- --------------------------------------------------------------- -->
 
+    <section class="ventanaCincoGrabar" id="window5">
+        <div class="ventanaCincoCabecera">
+            <span>
+                Capturando tu Guifo
+            </span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="emptyContainer"> <img src="./images/globe_img.png" alt="Globo terráqueo">
+            <p>Estamos subiendo tu Guifo</p>
+            <div class="progresscontainer">
+                <div id="myProgress2">
+                    <div id="myBar2"></div>
+                </div>
+            </div>
+            <p class="remaining">Tiempo restante: <span>38 años</span> algunos minutos</p>
+        </div>
+        <div class="cancelButton">
+            <button onclick="myStopFunction();" class="cancel">Cancelar</button>
+        </div>
+    </section>
+
+
+     <!-- --------------------------------------------------------------- -->
+     <input class="emptyurl" id="emptyfield" type="url">
     <section class="misGifos">
         <div class="misGifosTit">
             <p id="misGifosTitulo">Mis Guifos:</p>
