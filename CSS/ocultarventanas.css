@@ -1,4 +1,4 @@
-.ventanaUnoGrabar{
+  .ventanaUnoGrabar{
     display: block;
 }
 
@@ -18,6 +18,10 @@
     display: none;
 }
 
-.emptyurl {
+.ventanaSeisGrabar{
     display: none;
 }
+
+.emptyurl {
+    display: none;
+}   

@@ -17,6 +17,8 @@ var ventana_Dos = document.getElementById("ventanaDosGrabar")
 var ventana_Tres = document.getElementById("ventanaTresGrabar")
 var ventana_Cuatro = document.getElementById("ventanaCuatroGrabar")
 var ventana_Cinco = document.getElementById("ventanaCincoGrabar")
+var ventana_Seis = document.getElementById("ventanaSeisGrabar")
+var smallprev = document.getElementById("small");
 
 /////////////////
 document.getElementById("btn-cancel").onclick = function hideShow() {
@@ -40,8 +42,8 @@ function ocultar_Ventana_Tres() {
 }
 
 function ocultar_Ventana_Cuatro(){
-  ventana_Cuatro.style.display="none"
-  ventana_Cinco.style.display="flex"
+  ventana_Cinco.style.display="none"
+  ventana_Uno.style.display="flex"
 }
 
 function ocultar_Ventana_Cinco(){
@@ -127,7 +129,7 @@ function stopRecordingCallback() {
   descargaGif = URL.createObjectURL(recorder.getBlob());/*descarga URL*/
   console.log(descargaGif);
 
-  form.append('file', recorder.getBlob(), 'andy.gif');
+  form.append('file', recorder.getBlob(), 'juanda.gif');
   console.log(form.get('file'))
   recorder.camera.stop(); //sino como freno la camara?s
 }

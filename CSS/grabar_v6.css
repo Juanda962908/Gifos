@@ -1,0 +1,134 @@
+.ventanaSeisGrabar {
+    margin-top: 5vh;
+    width: 45.06rem;
+    height: 24.44rem;
+    background: #E6E6E6;
+
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+.ventanaSeisCabecera {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.ventanaSeisCabecera span{
+    margin-left: 0.44rem;
+    color: #FFFFFF;
+}
+
+.imageBotones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 2.88rem;
+  margin-top: 1.81rem;
+
+}
+
+.PreviewContainerSeis{
+    width: 23.19rem;
+    height: 12.25rem;
+    margin-top: 1.69rem;
+    margin-left: 1.5rem;
+    
+}
+.PreviewContainerSeis img{
+    height: 196px;
+    width: 100%;
+}
+
+.rightButtons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.06rem;
+    margin-left: 1.69rem;
+}
+
+.rightButtons button{
+    width: 16rem;
+    height: 2.25rem;
+}
+
+
+.hiddeninput{
+    margin-top: 0.88rem;
+}
+
+
+.readyButton{
+    margin-left: 33.19rem;
+    margin-top: 3.81rem;
+   
+}
+
+.ready{
+    width: 9rem;
+    height: 2.25rem;
+    background: #F7C9F3;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.gridCont{
+ /*    margin-left: 1rem;  */
+margin-right: 1rem;
+margin-left: 6.25rem;
+
+    /*margin-top: 15px;*/
+}
+.gridCont img{
+    width: 100%;
+    height: 18.63rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+
+
+.misGif{
+    
+    margin-top: 9.56rem;
+}
+ .misGifTit{
+    width: 100rem;
+    height: 2rem;
+    
+    margin-left: 6.25rem;
+    margin-right: 8.75rem;
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+ .misGifTit p{
+    display: block;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    margin-top: 7px;
+    margin-left: 0.44rem;
+    margin-right: 8.75rem;
+}
+#gridMisGif{
+    margin-top: 20px;
+  
+/*     margin-left:6.20rem ; */
+    display: grid;
+  justify-content: space-between; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+}
+  
+

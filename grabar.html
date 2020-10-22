@@ -28,27 +28,7 @@
             </div>
 
 
-            <div class="botones">
-                <a class="botoncrear" href="./grabar.html">Crear Guifos</a>
-
-                <div class="elegirTema">
-                    <div class="BotonesTemas">
-                        <button class="botonTema1" onclick="Desplegar()">Elegir tema</button>
-                        <button class="botonTema2" onclick="Desplegar()"><img id="imgdrop" src="./images/dropdown.svg"
-                                alt="Desplegable elegir tema"></button>
-
-
-                        <div class="VerMisGuifos">
-                            <a id="record" href="./record.html"><span>M</span>is Guifos</a>
-                        </div>
-                    </div>
-                    <!-- <div class="TextoTemas" id="TextoTemas">
-                        <button class="Dia" onclick="SailorDay()">Sailor Day</button>
-                        <button class="Noche" onclick="SailorNight()">Sailor Night</button>
-
-                    </div> -->
-                </div>
-            </div>
+     
         </div>
     </section>
 
@@ -171,21 +151,21 @@
 
 
 
-    <section class="ventanaCincoGrabar" id="window5">
+    <section class="ventanaCincoGrabar" id="ventanaCincoGrabar">
         <div class="ventanaCincoCabecera">
             <span>
                 Capturando tu Guifo
             </span>
             <span><img src="./images/button3.svg" alt="botón de cierre"></span>
         </div>
-        <div class="emptyContainer"> <img src="./images/globe_img.png" alt="Globo terráqueo">
+        <div class="ContenerSubirGuifo"> <img src="./images/globe_img.png" alt="Globo terráqueo">
             <p>Estamos subiendo tu Guifo</p>
-            <div class="progresscontainer">
-                <div id="myProgress2">
-                    <div id="myBar2"></div>
+            <div class="progresoSubirGuifo">
+                <div class="myProgresoSubirGuifo" id="myProgresoSubirGuifo">
+                    <div class="myBar2" id="myBar2"></div>
                 </div>
-            </div>
-            <p class="remaining">Tiempo restante: <span>38 años</span> algunos minutos</p>
+               </div>
+            <p class="remaining">Tiempo restante: <span><s>38 años</s></span> algunos minutos</p>
         </div>
         <div class="cancelButton">
             <button onclick="myStopFunction();" class="cancel">Cancelar</button>
@@ -194,14 +174,44 @@
 
 
      <!-- --------------------------------------------------------------- -->
-     <input class="emptyurl" id="emptyfield" type="url">
-    <section class="misGifos">
-        <div class="misGifosTit">
-            <p id="misGifosTitulo">Mis Guifos:</p>
+
+    <section class="ventanaSeisGrabar" id="ventanaSeisGrabar">
+
+        <div class="ventanaSeisCabecera">
+            <span>
+                Guifo subido con éxito
+            </span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
         </div>
+        <div class="imageBotones">
+             <div class="PreviewContainerSeis"><img class="smallPreview" id="small" src="" alt="Vista del Gif subido a la API"></div>
+            <div class="rightButtons">
+                <p><b>Guifo creado con éxito</b></p>
+                <button class="copiarEnlace" id="btn-copylink" onclick="copytext();">Copiar enlace Guifo</button>
+                <button class="hiddeninput" type="text" id="fieldforcopy">
+                <a class="descargarGuifo" id="btn-download" download="juanda.gif">Descargar Guifo</a></button>
+            </div> 
+        </div>
+        <span class="readyButton">
+            <button class="ready" id="btn-done" onclick="hideall()">Listo</button></span>
 
-        <div id="gridMisGifos">
+    </section>
 
+
+
+<!-- --------------------------------------------------------------- -->
+
+  
+
+
+     <input class="emptyurl" id="emptyfield" type="url">
+     <section class="misGif">
+        <div class="misGifTit">
+            <p  id="misGifTitle">Mis Guifos:</p>
+        </div> 
+        <!-- Aca empieza el grid-->   
+        <div id="gridMisGif">
+            
         </div>
     </section>
 
