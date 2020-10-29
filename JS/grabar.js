@@ -1,7 +1,7 @@
 var imagess = document.getElementById('imageness')
 var recorder; 
 var image = document.getElementById('imagen')
-var nuevoVideo = document.getElementById('video')/// va a cambiar el nombr en elHTML
+var nuevoVideo = document.getElementById('video')
 let form = new FormData();
 let daiaId = '';
 let apiKey = "8Oc7NtbE0yskmJrjyzaHNBxjHycKZ3pp"
@@ -18,7 +18,7 @@ var ventana_Tres = document.getElementById("ventanaTresGrabar")
 var ventana_Cuatro = document.getElementById("ventanaCuatroGrabar")
 var ventana_Cinco = document.getElementById("ventanaCincoGrabar")
 var ventana_Seis = document.getElementById("ventanaSeisGrabar")
-var smallprev = document.getElementById("small");
+var smallprev = document.getElementById("small")
 
 
 document.getElementById("btn-cancel").onclick = function hideShow() {
@@ -63,11 +63,11 @@ function captureCamera(callback) {
   })
   .then(function(stream) {
     myvideo.srcObject = stream;ventanaCuatroGrabar
-    callback && callback(stream);
+    callback && callback(stream)
   })
   .catch(function(error) {
-  console.error(error);
-  alert("Ups, necesitamos tu cámara! Actualiza la página y vuelve a intentarlo");
+  console.error(error)
+  alert("Enciende tu Cámara ")
   })
   }
 
@@ -94,15 +94,15 @@ function captureCamera(callback) {
       .then(function(camera) {
           callback(camera);
       }).catch(function(error) {
-          alert('Unable to capture your camera. Please check console logs.');
-          console.error(error);
+         
+          console.error(error)
       });
   }
 
 
   function startRecordingNow() {
   
-    /*this.disabled = true;*/
+
     captureCamera(function(camera) {
         recorder = RecordRTC(camera, {
             type: 'gif',
@@ -113,31 +113,31 @@ function captureCamera(callback) {
             onGifRecordingStarted: function() {
             },
             onGifPreview: function(gifURL) {
-                image.src = gifURL;
+                image.src = gifURL
             }
         });
-        recorder.startRecording();
-        recorder.camera = camera;
-        document.getElementById('btn-stop-recording').disabled = false;
+        recorder.startRecording()
+        recorder.camera = camera
+        document.getElementById('btn-stop-recording').disabled = false
     });
 };
 
 
 
 function stopRecordingCallback() {
-  imagess.src = URL.createObjectURL(recorder.getBlob()); 
-  descargaGif = URL.createObjectURL(recorder.getBlob());
-  console.log(descargaGif);
+  imagess.src = URL.createObjectURL(recorder.getBlob())
+  descargaGif = URL.createObjectURL(recorder.getBlob())
+  console.log(descargaGif)
 
-  form.append('file', recorder.getBlob(), 'juanda.gif');
+  form.append('file', recorder.getBlob(), 'juanda.gif')
   console.log(form.get('file'))
-  recorder.camera.stop(); 
+  recorder.camera.stop()
 }
 
 function stopRecordingNow() {
-  this.disabled = true;
-  recorder.camera.stop();
-  recorder.stopRecording(stopRecordingCallback);
+  this.disabled = true
+  recorder.camera.stop()
+  recorder.stopRecording(stopRecordingCallback)
 };
 
 
@@ -145,34 +145,34 @@ function stopRecordingNow() {
 
 function postgif() {
 
-  var i = 0;
+  var i = 0
 
   if (i == 0) {
     i = 1;
-    var elem = document.getElementById("myBar2");
-    var width = 1;
-    var id = setInterval(frame, 40);
+    var elem = document.getElementById("myBar2")
+    var width = 1
+    var id = setInterval(frame, 40)
     function frame() {
       if (width >= 100) {
-        clearInterval(id);
-        i = 0;
+        clearInterval(id)
+        i = 0
       } else {
         width++;
-        elem.style.width = width + "%";
+        elem.style.width = width + "%"
       }
     }
   }
 
 finishupload = setTimeout(function(){ 
-  ventana_Cinco.style.display = "none";
-  ventana_Seis.style.display = "block";
+  ventana_Cinco.style.display = "none"
+  ventana_Seis.style.display = "block"
 }, 5000);
 
 
-ventana_Cuatro.style.display = "none";
-ventana_Cinco.style.display = "flex";
+ventana_Cuatro.style.display = "none"
+ventana_Cinco.style.display = "flex"
 
-downloadref.href = descargaGif;
+downloadref.href = descargaGif
 
 
 
@@ -183,11 +183,11 @@ downloadref.href = descargaGif;
         body: form
     })
     .then(response => {
-        console.log(response.status);
-        return response.json();
+        console.log(response.status)
+        return response.json()
     })
     .then(data =>{
-        let dataId = data.data.id;
+        let dataId = data.data.id
         fetch("https://api.giphy.com/v1/gifs/" + dataId + "?&api_key=" +apiKey)
             .then(response => {
                 return response.json()
@@ -195,28 +195,27 @@ downloadref.href = descargaGif;
             .then(obj => {
                 console.log(obj)
 
-                urlGif = obj.data.images.original.url;
-                smallprev.src = urlGif;
-                console.log(urlGif);
+                urlGif = obj.data.images.original.url
+                smallprev.src = urlGif
+                console.log(urlGif)
 
-                var aninput = document.getElementById("emptyfield");
-                aninput.value = urlGif;
+                var aninput = document.getElementById("emptyfield")
+                aninput.value = urlGif
 
 
-                localStorage.setItem(dataId, JSON.stringify(obj));//envio al local Storage el data id
-                console.log(localStorage)                 //y su contenido (obj) para guardarlo, por cada gif subido
-                    
-                var kv = localStorage.getItem(dataId);
-                var kvParse = JSON.parse(kv);  //le saco el stringgify
-                var keyUrl = kvParse.data.images.original.url; //obtengo la URL para poder mostrar el Gif
+                localStorage.setItem(dataId, JSON.stringify(obj))
+                console.log(localStorage)                 
+                var kv = localStorage.getItem(dataId)
+                var kvParse = JSON.parse(kv)
+                var keyUrl = kvParse.data.images.original.url
 
-                const trendCaja = document.createElement('div');//con esto hago que mi Gif recien grabado y subido al locasStorage
-                resultDisplay.appendChild(trendCaja);          //aparezca en la seccion sin necesidad de recargar la pagina
-                trendCaja.classList.add('gridCont');
+                const trendCaja = document.createElement('div')
+                resultDisplay.appendChild(trendCaja)
+                trendCaja.classList.add('gridCont')
 
-                const nuevoGif = document.createElement('img');
-                trendCaja.appendChild(nuevoGif);
-                nuevoGif.src = keyUrl;
+                const nuevoGif = document.createElement('img')
+                trendCaja.appendChild(nuevoGif)
+                nuevoGif.src = keyUrl
                 })
             })
        
@@ -227,20 +226,20 @@ downloadref.href = descargaGif;
 
 
 function move() {
-  var i = 0;
+  var i = 0
 
   if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
+    i = 1
+    var elem = document.getElementById("myBar")
     var width = 1;
     var id = setInterval(frame, 0.2);
     function frame() {
       if (width >= 100) {
-        clearInterval(id);
+        clearInterval(id)
         i = 0;
       } else {
         width++;
-        elem.style.width = width + "%";
+        elem.style.width = width + "%"
       }
     }
   }
@@ -251,46 +250,46 @@ function move() {
 function cargarLocalStorage(){
 
   for(i = 0; i < localStorage.length; i++){
-      var keyval = localStorage.key(i);
+      var keyval = localStorage.key(i)
 
-      var kv = localStorage.getItem(keyval);
-      var kvParse = JSON.parse(kv);  //le saco el stringgify
-      var keyUrl = kvParse.data.images.original.url; //obtengo la URL para poder mostrar el Gif en el contenedor (Mis GUIFOS)
+      var kv = localStorage.getItem(keyval)
+      var kvParse = JSON.parse(kv)  
+      var keyUrl = kvParse.data.images.original.url
 
-      const trendCaja = document.createElement('div');
-      resultDisplay.appendChild(trendCaja);
-      trendCaja.classList.add('gridCont');
+      const trendCaja = document.createElement('div')
+      resultDisplay.appendChild(trendCaja)
+      trendCaja.classList.add('gridCont')
 
-      const nuevoGif = document.createElement('img');
-      trendCaja.appendChild(nuevoGif);
-      nuevoGif.src = keyUrl;
+      const nuevoGif = document.createElement('img')
+      trendCaja.appendChild(nuevoGif)
+      nuevoGif.src = keyUrl
   }
 }
-cargarLocalStorage();
+cargarLocalStorage()
 
 
 
 
 
 function myStopFunction() {
-  clearTimeout(finishupload);
-  ventana_Cinco.style.display = "none";
-  ventana_Uno.style.display = "block";
+  clearTimeout(finishupload)
+  ventana_Cinco.style.display = "none"
+  ventana_Uno.style.display = "block"
 }
 
 function hideall() {
-  ventana_Seis.style.display = "none";
+  ventana_Seis.style.display = "none"
   ventana_Uno.style.display = "block"
 }
 
 
 function copytext() {
-  var copyhere = document.getElementById('fieldforcopy');
-  copyhere.value = urlGif;
-  var copyText = document.getElementById("myInput");
+  var copyhere = document.getElementById('fieldforcopy')
+  copyhere.value = urlGif
+  var copyText = document.getElementById("myInput")
   
-  copyhere.select();
+  copyhere.select()
   
-  document.execCommand("copy");
-  alert("Yay! Ya tenés tu enlace copiado al portapapeles");
+  document.execCommand("copy")
+  alert("Yay! Ya tenés tu enlace copiado al portapapeles")
 }

@@ -53,43 +53,43 @@ function SailorDay(){
 
 
 function resultados_de__opciones_busquedas(valorAbuscar) {
-  document.getElementById("tendenciatitulo").innerHTML = 'Resultados de busqueda' // Cambio el título  
-  document.getElementById("gridtendencias").innerHTML = '' //dejamos el contenido del div gidtrendin vacio
+  document.getElementById("tendenciatitulo").innerHTML = 'Resultados de busqueda'
+  document.getElementById("gridtendencias").innerHTML = '' 
   let Mostrar_resultado = document.getElementById('gridtendencias')
   let apikey = "8Oc7NtbE0yskmJrjyzaHNBxjHycKZ3pp"
   let x = document.getElementById("inputbusqueda").value
-  let url = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${valorAbuscar}&limit=16&offset=0&rating=G&lang=e`;
+  let url = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${valorAbuscar}&limit=16&offset=0&rating=G&lang=e`
 
 document.getElementById("sugeridosection").style.visibility = "hidden"
 document.getElementById("tendenciasection").style.marginTop="10px"
 
   fetch(url)
     .then(response => {
-      return response.json();
+      return response.json()
     })
     .then(json => {
       json.data.forEach(item => {
-        var gifurl = item.images.original.url;
+        var gifurl = item.images.original.url
 
-        const contenedor_imagen = document.createElement('div');
-        Mostrar_resultado.appendChild(contenedor_imagen);
-        contenedor_imagen.classList.add('gridcontenedorimagen');
+        const contenedor_imagen = document.createElement('div')
+        Mostrar_resultado.appendChild(contenedor_imagen)
+        contenedor_imagen.classList.add('gridcontenedorimagen')
 
-        const nuevo_Gif = document.createElement('img');
-        contenedor_imagen.appendChild(nuevo_Gif);
-        nuevo_Gif.src = gifurl;
-        nuevo_Gif.classList.add('gifBuscado');
+        const nuevo_Gif = document.createElement('img')
+        contenedor_imagen.appendChild(nuevo_Gif)
+        nuevo_Gif.src = gifurl
+        nuevo_Gif.classList.add('gifBuscado')
 
         const divtitle = document.createElement('div')
-        divtitle.classList.add('footer');
-        contenedor_imagen.appendChild(divtitle);
+        divtitle.classList.add('footer')
+        contenedor_imagen.appendChild(divtitle)
 
         const gtitle = document.createElement('p')
-        divtitle.appendChild(gtitle);
-        gtitle.innerHTML = item.title;
+        divtitle.appendChild(gtitle)
+        gtitle.innerHTML = item.title
       })
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
 }
 
 function resultados_de_busqueda_sugerido(){
