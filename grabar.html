@@ -23,6 +23,7 @@
     <section class="inicio" id="intro">
 
         <div class="contenedorinicio">
+            <a href="./index.html"><img class="flechavolver" src="./images/arrow.svg" alt="Volver atras"></a>
             <div class="logo">
                 <img id="logoimagen" src="./images/gifOF_logo.png" alt="Logo Principal vista normal">
             </div>
@@ -44,7 +45,7 @@
             </div>
             <div class="indicacionVentanaUno">
                 <div class="iconoVentanaUno">
-                    <img src="./images/window img.png" alt="">
+                    <img src="./images/windowimg.png" alt="">
                 </div>
                 <div class="tituloVentanaUno">
                     <h1>Aquí podrás crear tus propios guifos</h1>
@@ -77,7 +78,7 @@
             <div class="tituloVentanaDos">
                 <p>Un chequeo antes de empezar</p>
             </div>
-            <span><img src="./images/button3.svg" alt="botón de cierre"></spaustify-content: space-between;n>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
         </div>
         <div class="previewVentanaDos">
             <video id="video"></video>
@@ -96,10 +97,10 @@
             <div class="tituloVentanaTres">
                 <p>Capturando Tu Guifo</p>
             </div>
-            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+  
         </div>
         <div class="previewVentanaTres">
-            <img id="imagen" alt="Imagen capturada">
+            <img src="" id="imagen" alt="Imagen capturada">
         </div>
         <span class="tiempoConteo">
             <span id="timer" class="timer">
@@ -128,7 +129,7 @@
         
         <div class="windowFooter">
             <div class="timerandloader">
-                <span id="timer" class="timer">
+                <span id="timer2" class="timer">
                     00 : 00 : 00
                 </span>
                 <button class="fwdButton" onclick="move();"> <img src="./images/forward.svg" alt="fwd"> </button>
@@ -140,7 +141,7 @@
             </div>
             <span class="rptuploadbuttons">
                 <button class="repetir" onclick="ocultar_Ventana_Seis();">Repetir captura</button>
-                <button class="subir" id="btn-upload" onclick="postgif(); move(); hideShow5();">Subir Guifo</button>
+                <button class="subir" id="btn-upload" onclick="postgif(); move(); ocultar_Ventana_Cinco();">Subir Guifo</button>
             </span>
         </div>
 
@@ -188,8 +189,8 @@
             <div class="rightButtons">
                 <p><b>Guifo creado con éxito</b></p>
                 <button class="copiarEnlace" id="btn-copylink" onclick="copytext();">Copiar enlace Guifo</button>
-                <button class="hiddeninput" type="text" id="fieldforcopy">
-                <a class="descargarGuifo" id="btn-download" download="juanda.gif">Descargar Guifo</a></button>
+                <button class="hiddeninput"  id="fieldforcopy">
+                <a href="#" class="descargarGuifo" id="btn-download" download="juanda.gif">Descargar Guifo</a></button>
             </div> 
         </div>
         <span class="readyButton">

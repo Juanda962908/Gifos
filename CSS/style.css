@@ -20,9 +20,6 @@
     box-sizing: border-box;
 }
 
-body{
-    height: 1000vh;
-}
 
 html, body {
     max-width: 100%;

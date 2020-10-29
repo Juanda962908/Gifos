@@ -20,7 +20,7 @@ var ventana_Cinco = document.getElementById("ventanaCincoGrabar")
 var ventana_Seis = document.getElementById("ventanaSeisGrabar")
 var smallprev = document.getElementById("small");
 
-/////////////////
+
 document.getElementById("btn-cancel").onclick = function hideShow() {
     ventana_Uno.style.display = "none";
 }
@@ -125,13 +125,13 @@ function captureCamera(callback) {
 
 
 function stopRecordingCallback() {
-  imagess.src = URL.createObjectURL(recorder.getBlob()); /*para mostrar preview?*/
-  descargaGif = URL.createObjectURL(recorder.getBlob());/*descarga URL*/
+  imagess.src = URL.createObjectURL(recorder.getBlob()); 
+  descargaGif = URL.createObjectURL(recorder.getBlob());
   console.log(descargaGif);
 
   form.append('file', recorder.getBlob(), 'juanda.gif');
   console.log(form.get('file'))
-  recorder.camera.stop(); //sino como freno la camara?s
+  recorder.camera.stop(); 
 }
 
 function stopRecordingNow() {
@@ -141,7 +141,7 @@ function stopRecordingNow() {
 };
 
 
-// se sube el gift a giphy 
+
 
 function postgif() {
 
@@ -176,7 +176,7 @@ downloadref.href = descargaGif;
 
 
 
-///////Con esto sube el Gif a Giphy
+
 
     fetch(upLoadKey, {
         method: "POST",
@@ -247,7 +247,7 @@ function move() {
 }
 
 
-///////se ejecuta sola
+
 function cargarLocalStorage(){
 
   for(i = 0; i < localStorage.length; i++){
@@ -271,26 +271,26 @@ cargarLocalStorage();
 
 
 
-//para cuando se cancela la carga del guif, y tambien te deberia llevar a la primera ventana
+
 function myStopFunction() {
   clearTimeout(finishupload);
   ventana_Cinco.style.display = "none";
   ventana_Uno.style.display = "block";
 }
-//para volver a iniciar el ciclo en la ultima pantalla
+
 function hideall() {
   ventana_Seis.style.display = "none";
   ventana_Uno.style.display = "block"
 }
 
-//para copiar el enlace del guif (ultima pantalla)
+
 function copytext() {
   var copyhere = document.getElementById('fieldforcopy');
   copyhere.value = urlGif;
-  var copyText = document.getElementById("myInput");//copia al porta papeles
+  var copyText = document.getElementById("myInput");
   
-  copyhere.select();/* Select the text field */
+  copyhere.select();
   
-  document.execCommand("copy");/* Copy the text inside the text field */
+  document.execCommand("copy");
   alert("Yay! Ya tenés tu enlace copiado al portapapeles");
 }
