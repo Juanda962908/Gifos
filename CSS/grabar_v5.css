@@ -1,0 +1,105 @@
+.ventanaCincoGrabar {
+    margin-top: 5vh;
+    width: 53.75rem;
+    height: 34.25rem;
+    background: #E6E6E6;
+
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.ventanaCincoCabecera {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ContenerSubirGuifo {
+    width: 52.38rem;
+    height: 27.5rem;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.88rem;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+}
+
+.ContenerSubirGuifo img {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 8.69rem;
+    margin-left: 24.88rem;
+}
+
+.ContenerSubirGuifo p {
+    margin-left: 19.66rem;
+    width: 13.5rem;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 0.5rem;
+    font-family: 'Chakra Petch', sans-serif;
+    size: 1rem;
+}
+
+.progresoSubirGuifo {
+
+    width: 20.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.56rem;
+}
+
+
+.myProgresoSubirGuifo {
+    width: 100%;
+    background-image: linear-gradient(90deg, #999999 46.15%, #e6e6e6 46.15%, #e6e6e6 50%, #999999 50%, #999999 96.15%, #e6e6e6 96.15%, #e6e6e6 100%);
+    background-size: 26.00px 26.00px;
+}
+
+.myBar2 {
+    width: 5%;
+    height: 30px;
+    background-image: linear-gradient(90deg, #f7c9f3 45.83%, #b8b8b8 45.83%, #b8b8b8 50%, #f7c9f3 50%, #f7c9f3 95.83%, #b8b8b8 95.83%, #b8b8b8 100%);
+    background-size: 24.00px 24.00px;
+    ;
+}
+
+.remaining {
+    width: 50%;
+    text-align: center;
+}
+
+
+.cancelButton {
+    background: #FFF4FD;
+    width: 9rem;
+    height: 2.25rem;
+    margin-left: 43.88rem;
+    margin-top: 1.31rem;
+}
+
+.cancelButton button {
+    width: 9rem;
+    height: 2.25rem;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}

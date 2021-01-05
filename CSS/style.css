@@ -2,17 +2,26 @@
 
 @import "./inicio.css";
 @import "./busqueda.css";
-@import "./resultados.css";
-@import "./sugeridos.css";
+@import "./tendencia.css";
+@import "./sugerido.css";
+@import "./grabar_v1.css";
+@import "./grabar_v2.css"; 
+@import "./grabar_v3.css";
+@import "./grabar_v4.css";
+@import"./grabar_v5.css";
+@import"./grabar_v6.css";
+@import"./ocultarventanas.css";
+
 
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 0;   
     box-sizing: border-box;
 }
 
-body{
 
-    width: 100%;
-}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;   
+  }

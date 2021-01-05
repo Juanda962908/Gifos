@@ -1,0 +1,27 @@
+  .ventanaUnoGrabar{
+    display: block;
+}
+
+.ventanaDosGrabar{
+    display: none;
+}
+
+.ventanaTresGrabar{
+    display: none;
+}
+
+.ventanaCuatroGrabar{
+    display: none;
+}
+
+.ventanaCincoGrabar{
+    display: none;
+}
+
+.ventanaSeisGrabar{
+    display: none;
+}
+
+.emptyurl {
+    display: none;
+}   

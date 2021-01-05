@@ -1,13 +1,12 @@
-
 header {
     width: 100%;
-    height: 24px;
+   
     margin-top: 0px;
 }
 
 .barratitulo {
     width: 100%;
-    height: 23px;
+    height: 1.44rem;
     margin-top: 1px;
     margin-left: 1px;
     margin-right: 1px;
@@ -34,31 +33,37 @@ header {
     flex-direction: row;
     align-items: center;
     margin-left: 0%;
-   /*  background: greenyellow; */
+    /*  background: greenyellow; */
 }
 
 .contenedorinicio {
     display: flex;
     flex-direction: row;
     width: 100%;
+    /* background: red; */
 }
 
 .logo {
     width: 7.1%;
-    height: 64px;
-    margin-left: 6.3%;
-    margin-top: 35px;
+    height: 6%;
+    margin-left:5.69rem;
+    margin-top: 2.19rem;
+}
+
+.flechavolver {
+    margin-top: 3.44rem;
+    margin-left: 3.75rem;
 }
 
 .botones {
     width: 100%;
     position: absolute;
-    height: 36px;
+    height: 2.25rem;
     display: flex;
     flex-direction: row;
     margin-left: 61%;
     margin-top: 44px;
-   /*  background: red; */
+   
 }
 
 /* .botones button{
@@ -87,87 +92,124 @@ header {
 }
 
 
-.temas {
-
+.elegirTema {
     display: flex;
-    flex-direction: row;
-    position: relative;
-   /*  background: royalblue; */
-    width: 100%;
-}
-
-.botontema1 {
-    width: 9.1%;
-    height: 36px;
-    padding-right: 0px;
-    margin-right: 0px;
-    font-size: 16px;
-    line-height: 18px;
-    margin-left: 1.1%;
-    background: #F7C9F3;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-}
-
-.botontema2 {
-    width: 2.5%;
-    height: 36px;
-    background: #F7C9F3;
-border: 1px solid #110038;
-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-
-}
-
-.botontema1:hover {
-    background: #E6BBE2;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-    border: 1px solid #110038;
-}
-
-.botontema2:hover {
-    background: #E6BBE2;
-    border: 1px solid #110038;
-    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-}
-
-.grabar {
-    text-decoration: none;
-    color: #000000;
-    padding-top: 8px;
-    margin-left: 1.1%;
-    width: 5.3%;
-}
-
-.grabar span {
-    color: #000000;
-    text-decoration: underline;
-}
-
-#desplegableTema {
-    width: 11.8%;
-    height: 102px;
-    display: none;
     flex-direction: column;
-    margin-left: 2px;
+    margin-left:1rem;
+    width: 100%;
+    
+}
+
+.BotonesTemas {
+    width: 100%;
+    display: flex;
+    
+}
+
+
+
+.botonTema1 {
+    width: 9.1%;
+    height: 2.25rem;
+    background:#F7C9F3 100% ;
+    font-family: ChakraPetch-Regular;
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+text-align: center;
+line-height: 18px;
+}
+
+.botonTema1:hover{
+    background: #E6BBE2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.botonTema2 {
+    width: 2.5%;
+    height: 2.25rem;
+    margin-left: 0%;
+    background:#F7C9F3 100% ;
+    
+}
+
+.botonTema2:hover{
+    background: #E6BBE2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.TextoTemas {
+    display: flex;
+    flex-direction: column;
+    width: 11.8%;
+    height: 6.38rem;
+
+    padding-left: 0.7%;
+    padding-right: 0.7%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    z-index: 1000;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-    position: relative;
-    z-index: 991;
+
+
 }
 
-#desplegableTema button {
-    width: 10.4%;
+
+
+.Dia {
     height: 36px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 0.5%;
     background: #F0F0F0;
     border: 1px solid #808080;
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
 }
 
-#desplegableTema button:active {
+.Noche {
+    height: 36px;
+    margin-top: 5%;
+    padding-bottom: 0.5%;
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
+}
+
+.Dia:active {
     background: #FFF4FD;
     border: 1px solid #CCA6C9;
     box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
+.Noche:active {
+
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+
+}
+
+.VerMisGuifos{
+    width: 4.75rem;;
+    height: 36px;    
+    margin-left: 1.1%;  
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.VerMisGuifos a{
+    color: #110038;
+    text-decoration: none;
+}
+
+.VerMisGuifos a span{
+    color: #110038;
+    text-decoration: underline;
+}

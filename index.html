@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guifos</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link id="estilos" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -19,10 +21,10 @@
     </header>
 
 
-<!-- ---------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------- -->
 
     <section class="inicio" id="intro">
-        
+
         <div class="contenedorinicio">
             <div class="logo">
                 <img id="logoimagen" src="./images/gifOF_logo.png" alt="Logo Principal vista normal">
@@ -30,71 +32,89 @@
 
 
             <div class="botones">
-                <a class="botoncrear" href="./record.html">Crear Guifos</a>
-                <div  class="temas" id="temas">
-                    <button class="botontema1" onclick="funcionDesplegable()">Elegir tema</button>
-                    <button class="botontema2" onclick="funcionDesplegable()"><img id="imgdrop" src="./images/dropdown.svg" alt="Desplegable elegir tema"></button>
-                    <a class="grabar" id="record" href="./record.html"><span>M</span>is Guifos</a>
-                    <div id="desplegabletema">
-                        <button id="dia" onclick="estiloLight()">Sailor Day</button>
-                        <button id="noche" onclick="estiloDark()">Sailor Night</button>
+                <a class="botoncrear" href="./grabar.html">Crear Guifos</a>
+
+                <div class="elegirTema">
+                    <div class="BotonesTemas">
+                        <button class="botonTema1" onclick="Desplegar()">Elegir tema</button>
+                        <button class="botonTema2" onclick="Desplegar()"><img id="imgdrop" src="./images/dropdown.svg"
+                                alt="Desplegable elegir tema"></button>
+
+
+                        <div class="VerMisGuifos">
+                            <a id="record" href="./grabar.html"><span>M</span>is Guifos</a>
+                        </div>
+                    </div>
+
+                    <div class="TextoTemas" id="TextoTemas">
+                        <button class="Dia" onclick="SailorDay()">Sailor Day</button>
+                        <button class="Noche" onclick="SailorNight()">Sailor Night</button>
 
                     </div>
                 </div>
-               
             </div>
         </div>
     </section>
 
 
-<!-- ---------------------------------------------------------------- -->
-
-
-
-
+    <!-- ---------------------------------------------------------------- -->
 
     <section class="busqueda" id="busqueda">
-        <div class="contenedorbusqueda" onmousemove="mostrarmenu()" onmouseout="ocultarmenu()">
+        <div class="contenedorbusqueda" id="contenedorbusqueda" onmousemove="mostrarmenu()" onmouseout="ocultarmenu()" onkeyup="ActivaDesactivaBotonBuscar()" >
             <div id="barrainicialbusqueda" class="barrainicialbusqueda">
                 <div class="barrabusquedatitulo">
                     <p>Buscar</p>
                 </div>
-                <div class="barrabusqueda" id="barrabusqueda">    
-                    <input class="inputbusqueda" id="inputbusqueda" type="text" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">
-                    <button class="botonlupa"  id="botonlupa" type="submit" onclick="searchFromInput()"><span><img src="./images/lupa_inactive.svg" alt="Lupa">Buscar</span></button>
-                </div>                
-            </div>  
-            
-            <div id="tipobusquedas" class="tipobusquedas">
-                <button class="resultadosugerido" type="button"><p>Resultado de búsqueda sugerido</p></button>
-                <button class="resultadosimilar" type="button"><p>resultado similar de búsqueda</p></button>
-                <button class="otromas" type="button"><p>Y otro más</p></button>
+                <div class="barrabusqueda" id="barrabusqueda">
+                    <input  class="inputbusqueda" id="inputbusqueda" type="text"
+                        placeholder=" Busca gifs, hashtags, temas, busca lo que quieras..." >
+                    <button class="botonlupa" id="botonlupa" type="submit" disabled
+                        onclick="resultados_de_busquedas(),ocultarmenu()"><span><img src="./images/lupa_inactive.svg"
+                                alt="Lupa">Buscar</span></button>
+                </div>
             </div>
-         
+            
+            <div class="contenedorHistorial" id="contenedorHistorial">
+                
+            </div>
+
+
+            <div id="tipobusquedas" class="tipodebusquedas" disabled>
+                <button class="resultadosugerido" id="resultadosugerido" type="button" onclick="resultados_de_busqueda_sugerido()">
+                   
+                </button>
+                <button class="resultadosimilar" id="resultadosimilar" type="button" onclick="resultado_similar()">
+                    
+                </button>
+                <button class="otromas" id="otromas" type="button" onclick="resultado_otromas()">
+                
+                </button>
+            </div> 
+
+                       
+
+
         </div>
+       
     </section>
 
-
-
-
-
-<!-- ---------------------------------------------------------------- -->
-    <section class="sugeridosection">
+    <!-- ---------------------------------------------------------------- -->
+    <section class="sugeridosection" id="sugeridosection">
         <div class="sugeridotitulo">
             <p>Hoy te sugerimos:</p>
-        </div>    
-        <div id="gifSugeridos" class="flexSugerido">
+        </div>
+        <div id="sugeridos" class="contenedor_sugeridos">
         </div>
     </section>
 
 
 
-<!-- ---------------------------------------------------------------- -->
-    <section class="tendenciasection">
+    <!-- ---------------------------------------------------------------- -->
+    <section class="tendenciasection" id="tendenciasection">
         <div class="tendencia">
             <p id="tendenciatitulo" class="tendenciatitulo">Tendencias:</p>
-        </div> 
-        <!-- Aca empieza el grid-->   
+        </div>
+        <!-- Aca empieza el grid-->
         <div id="gridtendencias" class="gridtendencias">
         </div>
     </section>
@@ -103,8 +123,10 @@
 
 
 
-    <script src="./JS/javascript.js"></script>  
-    <script src="./JS/menubuscar.js"></script> 
+
+    <script src="./JS/menubuscar.js"></script>
+    <script src="./JS/Tendencia.js"></script>
+    <script src="./JS/Sugeridos.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="barratitulo">
+            <p>¡Bienvenidos/as a Guifos.com! ------Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        </div>
+    </header>
+
+
+    <!-- ---------------------------------------------------------------- -->
+
+    <section class="inicio" id="intro">
+
+        <div class="contenedorinicio">
+            <a href="./index.html"><img class="flechavolver" src="./images/arrow.svg" alt="Volver atras"></a>
+            <div class="logo">
+                <img id="logoimagen" src="./images/gifOF_logo.png" alt="Logo Principal vista normal">
+            </div>
+
+
+     
+        </div>
+    </section>
+
+
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaUnoGrabar" id="ventanaUnoGrabar">
+
+        <div class="ventanaUno">
+            <div class="tituloBarraVentanaUno">
+                <p>Crear Guifos</p>
+            </div>
+            <div class="indicacionVentanaUno">
+                <div class="iconoVentanaUno">
+                    <img src="./images/windowimg.png" alt="">
+                </div>
+                <div class="tituloVentanaUno">
+                    <h1>Aquí podrás crear tus propios guifos</h1>
+                    <div class="indicaciones">
+                        <p>
+                            Crear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                            personalizados. Los pasos para crear tu guifo son: <br><br>
+                            <strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso) <br>
+                            <strong> 2)</strong> Capturar tu momento guifo <br>
+                            <strong> 3)</strong> Revisar el momento <br>
+                            <strong> 4)</strong> Listo para subir y compartir! <br>
+                            ¿Quieres comenzar a crear tu guifo ahora?
+                        </p>
+                    </div>
+                    <div class="botonesVentanaUno">
+                        <span class="loadWindowButtons"><button id="btn-cancel" class="cancel">Cancelar</button>
+                            <button class="start" id="btn-start"
+                                onclick="ocultar_Ventana_Uno(); verImagen();">Comenzar</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaDosGrabar" id="ventanaDosGrabar">
+        <div class="ventanaDosCabecera">
+            <div class="tituloVentanaDos">
+                <p>Un chequeo antes de empezar</p>
+            </div>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="previewVentanaDos">
+            <video id="video"></video>
+        </div>
+        <span class="capturaVentanaDos">
+            <button class="IconoCamara"><img src="./images/camera.svg" alt="camera button"></button>
+            <button id="botonGrabar" onclick="ocultar_Ventana_Dos(); startRecordingNow();" class="capturar">Capturar</button>
+        </span>
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+
+
+    <section class="ventanaTresGrabar" id="ventanaTresGrabar">
+        <div class="ventanaTresCabecera">
+            <div class="tituloVentanaTres">
+                <p>Capturando Tu Guifo</p>
+            </div>
+  
+        </div>
+        <div class="previewVentanaTres">
+            <img src="" id="imagen" alt="Imagen capturada">
+        </div>
+        <span class="tiempoConteo">
+            <span id="timer" class="timer">
+                00 : 00 : 00
+            </span>
+            <span class="grabacion">
+                <button class="grabacionIcono"><img src="./images/recording.svg" alt="recording button"></button>
+                <button class="grabacionListo" id="btn-stop-recording"
+                    onclick="ocultar_Ventana_Tres(); stopRecordingNow();">Listo</button></span>
+        </span>
+
+
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaCuatroGrabar" id="ventanaCuatroGrabar">
+        <div class="ventanaCuatroCabecera">
+            <span class="titleventanaCuatro">
+                Vista previa
+            </span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+
+        <div class="previewVentanaCuatro"><img id="imageness" alt="vista previa gif capturado"></div> 
+        
+        <div class="windowFooter">
+            <div class="timerandloader">
+                <span id="timer2" class="timer">
+                    00 : 00 : 00
+                </span>
+                <button class="fwdButton" onclick="move();"> <img src="./images/forward.svg" alt="fwd"> </button>
+                <div class="progresscontainer">
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                </div>
+            </div>
+            <span class="rptuploadbuttons">
+                <button class="repetir" onclick="ocultar_Ventana_Seis();">Repetir captura</button>
+                <button class="subir" id="btn-upload" onclick="postgif(); move(); ocultar_Ventana_Cinco();">Subir Guifo</button>
+            </span>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="ventanaCincoGrabar" id="ventanaCincoGrabar">
+        <div class="ventanaCincoCabecera">
+            <span>
+                Capturando tu Guifo
+            </span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="ContenerSubirGuifo"> <img src="./images/globe_img.png" alt="Globo terráqueo">
+            <p>Estamos subiendo tu Guifo</p>
+            <div class="progresoSubirGuifo">
+                <div class="myProgresoSubirGuifo" id="myProgresoSubirGuifo">
+                    <div class="myBar2" id="myBar2"></div>
+                </div>
+               </div>
+            <p class="remaining">Tiempo restante: <span><s>38 años</s></span> algunos minutos</p>
+        </div>
+        <div class="cancelButton">
+            <button onclick="myStopFunction();" class="cancel">Cancelar</button>
+        </div>
+    </section>
+
+
+     <!-- --------------------------------------------------------------- -->
+
+    <section class="ventanaSeisGrabar" id="ventanaSeisGrabar">
+
+        <div class="ventanaSeisCabecera">
+            <span>
+                Guifo subido con éxito
+            </span>
+            <span><img src="./images/button3.svg" alt="botón de cierre"></span>
+        </div>
+        <div class="imageBotones">
+             <div class="PreviewContainerSeis"><img class="smallPreview" id="small" src="" alt="Vista del Gif subido a la API"></div>
+            <div class="rightButtons">
+                <p><b>Guifo creado con éxito</b></p>
+                <button class="copiarEnlace" id="btn-copylink" onclick="copytext();">Copiar enlace Guifo</button>
+                <button class="hiddeninput"  id="fieldforcopy">
+                <a href="#" class="descargarGuifo" id="btn-download" download="juanda.gif">Descargar Guifo</a></button>
+            </div> 
+        </div>
+        <span class="readyButton">
+            <button class="ready" id="btn-done" onclick="hideall()">Listo</button></span>
+
+    </section>
+
+
+
+<!-- --------------------------------------------------------------- -->
+
+  
+
+
+     <input class="emptyurl" id="emptyfield" type="url">
+     <section class="misGif">
+        <div class="misGifTit">
+            <p  id="misGifTitle">Mis Guifos:</p>
+        </div> 
+        <!-- Aca empieza el grid-->   
+        <div id="gridMisGif">
+            
+        </div>
+    </section>
+
+
+
+
+    <script src="./JS/grabar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
+</body>
+
+</html>
