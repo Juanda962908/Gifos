@@ -62,7 +62,8 @@ function captureCamera(callback) {
   video: true
   })
   .then(function(stream) {
-    myvideo.srcObject = stream;ventanaCuatroGrabar
+    myvideo.srcObject = stream;
+    myvideo.play
     callback && callback(stream)
   })
   .catch(function(error) {
@@ -89,38 +90,42 @@ function captureCamera(callback) {
 
     function captureCamera(callback) {
       navigator.mediaDevices.getUserMedia({ 
-          video: true 
-      })
-      .then(function(camera) {
-          callback(camera);
-      }).catch(function(error) {
-         
-          console.error(error)
-      });
+        video: true 
+    })
+    .then(function(camera) {
+        callback(camera);
+    }).catch(function(error) {
+        alert('La camára no está acitvada');
+        console.error(error);
+    });
   }
-
 
   function startRecordingNow() {
   
-
     captureCamera(function(camera) {
-        recorder = RecordRTC(camera, {
-            type: 'gif',
-            frameRate: 1,
-            quality: 10,
-            width: 360,
-            hidden: 240,
-            onGifRecordingStarted: function() {
-            },
-            onGifPreview: function(gifURL) {
-                image.src = gifURL
-            }
-        });
-        recorder.startRecording()
-        recorder.camera = camera
-        document.getElementById('btn-stop-recording').disabled = false
-    });
+      recorder = RecordRTC(camera, {
+          type: 'gif',
+          frameRate: 1,
+          quality: 10,
+          width: 360,
+          hidden: 240,
+          onGifRecordingStarted: function() {
+          },
+          onGifPreview: function(gifURL) {
+              image.src = gifURL;
+          }
+      });
+      recorder.startRecording();
+      recorder.camera = camera;
+      document.getElementById('btn-stop-recording').disabled = false;
+  });
+
+
+
+
+
 };
+
 
 
 
@@ -145,79 +150,84 @@ function stopRecordingNow() {
 
 function postgif() {
 
-  var i = 0
+
+  var i = 0;
 
   if (i == 0) {
     i = 1;
-    var elem = document.getElementById("myBar2")
-    var width = 1
-    var id = setInterval(frame, 40)
+    var elem = document.getElementById("myBar2");
+    var width = 1;
+    var id = setInterval(frame, 40);
     function frame() {
       if (width >= 100) {
-        clearInterval(id)
-        i = 0
+        clearInterval(id);
+        i = 0;
       } else {
         width++;
-        elem.style.width = width + "%"
+        elem.style.width = width + "%";
       }
     }
   }
 
-finishupload = setTimeout(function(){ 
-  ventana_Cinco.style.display = "none"
-  ventana_Seis.style.display = "block"
-}, 5000);
 
 
-ventana_Cuatro.style.display = "none"
-ventana_Cinco.style.display = "flex"
+  finishupload = setTimeout(function(){ 
+    ventana_Cinco.style.display = "none"
+    ventana_Seis.style.display = "block"
+  }, 4000);
+  
+  
+  ventana_Cuatro.style.display = "none"
+  ventana_Cinco.style.display = "flex"
+  
+  downloadref.href = descargaGif
 
-downloadref.href = descargaGif
 
 
-
-
+///////Con esto sube el Gif a Giphy
 
     fetch(upLoadKey, {
         method: "POST",
         body: form
     })
     .then(response => {
-        console.log(response.status)
-        return response.json()
+        console.log(response.status);
+        return response.json();
     })
     .then(data =>{
-        let dataId = data.data.id
-        fetch("https://api.giphy.com/v1/gifs/" + dataId + "?&api_key=" +apiKey)
+        let dataId = data.data.id;
+        fetch("https://api.giphy.com/v1/gifs/"+dataId+"?&api_key="+apiKey)
             .then(response => {
                 return response.json()
             })
             .then(obj => {
                 console.log(obj)
 
-                urlGif = obj.data.images.original.url
-                smallprev.src = urlGif
-                console.log(urlGif)
+                urlGif = obj.data.images.original.url;
+                smallprev.src = urlGif;
+                console.log(urlGif);
 
-                var aninput = document.getElementById("emptyfield")
-                aninput.value = urlGif
+                var aninput = document.getElementById("emptyfield");
+                aninput.value = urlGif;
 
 
-                localStorage.setItem(dataId, JSON.stringify(obj))
-                console.log(localStorage)                 
-                var kv = localStorage.getItem(dataId)
-                var kvParse = JSON.parse(kv)
-                var keyUrl = kvParse.data.images.original.url
+                localStorage.setItem(dataId, JSON.stringify(obj));//envio al local Storage el data id
+                console.log(localStorage)                 //y su contenido (obj) para guardarlo, por cada gif subido
+                    
+                var kv = localStorage.getItem(dataId);
+                var kvParse = JSON.parse(kv);  //le saco el stringgify
+                var keyUrl = kvParse.data.images.original.url; //obtengo la URL para poder mostrar el Gif
 
-                const trendCaja = document.createElement('div')
-                resultDisplay.appendChild(trendCaja)
-                trendCaja.classList.add('gridCont')
+                const trendCaja = document.createElement('div');//con esto hago que mi Gif recien grabado y subido al locasStorage
+                resultDisplay.appendChild(trendCaja);          //aparezca en la seccion sin necesidad de recargar la pagina
+                trendCaja.classList.add('gridCont');
 
-                const nuevoGif = document.createElement('img')
-                trendCaja.appendChild(nuevoGif)
-                nuevoGif.src = keyUrl
+                const nuevoGif = document.createElement('img');
+                trendCaja.appendChild(nuevoGif);
+                nuevoGif.src = keyUrl;
                 })
             })
+       
        
 
 }
@@ -246,26 +256,26 @@ function move() {
 }
 
 
-
 function cargarLocalStorage(){
 
   for(i = 0; i < localStorage.length; i++){
-      var keyval = localStorage.key(i)
+      var keyval = localStorage.key(i);
 
-      var kv = localStorage.getItem(keyval)
-      var kvParse = JSON.parse(kv)  
-      var keyUrl = kvParse.data.images.original.url
+      var kv = localStorage.getItem(keyval);
+      var kvParse = JSON.parse(kv);  //le saco el stringgify
+      var keyUrl = kvParse.data.images.original.url; //obtengo la URL para poder mostrar el Gif en el contenedor (Mis GUIFOS)
 
-      const trendCaja = document.createElement('div')
-      resultDisplay.appendChild(trendCaja)
-      trendCaja.classList.add('gridCont')
+      const trendCaja = document.createElement('div');
+      resultDisplay.appendChild(trendCaja);
+      trendCaja.classList.add('gridCont');
 
-      const nuevoGif = document.createElement('img')
-      trendCaja.appendChild(nuevoGif)
-      nuevoGif.src = keyUrl
+      const nuevoGif = document.createElement('img');
+      trendCaja.appendChild(nuevoGif);
+      nuevoGif.src = keyUrl;
   }
 }
-cargarLocalStorage()
+cargarLocalStorage();
+ 
 
 
 
@@ -278,6 +288,7 @@ function myStopFunction() {
 }
 
 function hideall() {
+  location.reload()
   ventana_Seis.style.display = "none"
   ventana_Uno.style.display = "block"
 }
@@ -293,3 +304,5 @@ function copytext() {
   document.execCommand("copy")
   alert("Yay! Ya tenés tu enlace copiado al portapapeles")
 }
+
+

@@ -60,33 +60,42 @@
     <!-- ---------------------------------------------------------------- -->
 
     <section class="busqueda" id="busqueda">
-        <div class="contenedorbusqueda" onmousemove="mostrarmenu()" onmouseout="ocultarmenu()">
+        <div class="contenedorbusqueda" id="contenedorbusqueda" onmousemove="mostrarmenu()" onmouseout="ocultarmenu()" onkeyup="ActivaDesactivaBotonBuscar()" >
             <div id="barrainicialbusqueda" class="barrainicialbusqueda">
                 <div class="barrabusquedatitulo">
                     <p>Buscar</p>
                 </div>
                 <div class="barrabusqueda" id="barrabusqueda">
                     <input  class="inputbusqueda" id="inputbusqueda" type="text"
-                        placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">
-                    <button class="botonlupa" id="botonlupa" type="submit"
-                        onclick="resultados_de_busquedas()"><span><img src="./images/lupa_inactive.svg"
+                        placeholder=" Busca gifs, hashtags, temas, busca lo que quieras..." >
+                    <button class="botonlupa" id="botonlupa" type="submit" disabled
+                        onclick="resultados_de_busquedas(),ocultarmenu()"><span><img src="./images/lupa_inactive.svg"
                                 alt="Lupa">Buscar</span></button>
                 </div>
             </div>
-
-            <div id="tipobusquedas" class="tipodebusquedas">
-                <button class="resultadosugerido" type="button" onclick="resultados_de_busqueda_sugerido()">
-                   Pepsi
-                </button>
-                <button class="resultadosimilar" type="button" onclick="resultado_similar()">
-                    Moto
-                </button>
-                <button class="otromas" type="button" onclick="resultado_otromas()">
-                    Programación
-                </button>
+            
+            <div class="contenedorHistorial" id="contenedorHistorial">
+                
             </div>
 
+
+            <div id="tipobusquedas" class="tipodebusquedas" disabled>
+                <button class="resultadosugerido" id="resultadosugerido" type="button" onclick="resultados_de_busqueda_sugerido()">
+                   
+                </button>
+                <button class="resultadosimilar" id="resultadosimilar" type="button" onclick="resultado_similar()">
+                    
+                </button>
+                <button class="otromas" id="otromas" type="button" onclick="resultado_otromas()">
+                
+                </button>
+            </div> 
+
+                       
+
+
         </div>
+       
     </section>
 
     <!-- ---------------------------------------------------------------- -->
